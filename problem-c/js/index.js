@@ -44,7 +44,6 @@ function extractOpponent(game) {
     return game.home;
   }
 }
-console.log(extractOpponent(huskyGames2016[5]));
 
 //Use the `map()` method and your `extractOpponent()` function to create an array
 //of UW's opponents for the season (in the same order as in the `huskyGames2016`).
@@ -56,10 +55,12 @@ console.log(opponents);
 //Define a function `huskiesLost()` that takes in a "game" object and returns
 //whether or not UW lost.
 function huskiesLost(game) {
-  if (game.home == "UW" && game.home_score < game.opponent_score) {
-    return "lost";
-  } else if (game.opponent == "UW" && game.home_score > game.opponent_score) {
-    return "lost";
+  if (game.home == "UW") {
+    if (game.home_score < game.opponent_score)
+      return "lost";
+  } else if (game.opponent == "UW") {
+    if (game.home_score > game.opponent_score)
+      return "lost";
   } else {
     return "won";
   }
