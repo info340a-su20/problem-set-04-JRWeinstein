@@ -73,7 +73,7 @@ var rect = {
     y: 50,
     width: 100,
     height: 50
-}
+};
 console.log(rect);
 
 //Log out the x- and y- coordinates of the rectangle (its location). Your output 
@@ -99,7 +99,7 @@ var circle = {
     cx: 34,
     cy: 43,
     radius: numbers[numbers.length - 1]
-}
+};
 console.log(circle);
 
 
@@ -118,7 +118,7 @@ shapes.push(
         base: 33,
         height: 44
     }
-)
+);
 console.log(shapes);
 
 //Log out the triangle's `hypotenuse` property (don't calculate it, just log out
@@ -130,4 +130,4 @@ console.log(shapes[2].hypotenuse);
 //Visually check: what happens if you inspect the previously logged array in the 
 //Chrome developer console?
 shapes[2].hypotenuse = 55;
-console.log(shapes[2].hypotenuse);
+console.log(shapes);

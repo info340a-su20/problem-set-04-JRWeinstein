@@ -140,7 +140,7 @@ let makeCombinedFilter = function(firstFunction, secondFunction) {
     return firstCallBack && secondCallBack;
   };
   return combinedFilter;
-}
+};
 
 
 //Create a variable `fumbledAndLostFilter` which is the result of calling the 

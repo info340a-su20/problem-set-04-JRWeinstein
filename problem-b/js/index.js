@@ -30,9 +30,9 @@ console.log(twelveString); /* Result: 84 - String and integer concatenation */
      http://www.mathwarehouse.com/calculators/continuous-compound-interest-calculator.php
 */
 function compoundInterest(P, R, T) {
-  return (P * Math.pow(Math.E, R * T)).toFixed(2);
+  return (P * Math.pow(Math.E, R * T));
 }
-console.log(compoundInterest(1000, .05, 50))
+console.log(compoundInterest(1000, .05, 50));
 
 
 /* Define a function `fizzBuzz()` that takes in a single number as an argument.
@@ -92,19 +92,21 @@ console.log(getLetterFrequencies("Mississippi"));
     the `deck` array! 
     
     You can log out the `deck` to check your work! */
-function deck() {
-  var deck = new Array();
+function deckBuilder() {
+  var cards = new Array();
   var suits = ["hearts", "diamonds", "clubs", "spades"];
   var ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
   for (var i = 0; i < suits.length; i++) {
     for (var j = 0; j < ranks.length; j++) {
-      deck.push({ Suit: suits[i], Rank: ranks[j] });
+      cards.push({ suit: suits[i], rank: ranks[j] });
     }
   }
 
-  return deck;
+  return cards;
 }
+console.log(deckBuilder());
+var deck = deckBuilder();
 
 //You can test the below functions by creating e.g., a `pokerHand` array that 
 //contains five cards from the `deck`.
@@ -122,7 +124,7 @@ console.log(pokerHand);
    Hint: use a loop to check each card. */
 function containsQueenOfHearts(hand) {
   for (var i = 0; i < hand.length; i++) {
-    if (hand[i].Suit == "hearts" && hand[i].Rank == "12")
+    if (hand[i].suit == "hearts" && hand[i].rank == "12")
       return true;
   }
   return false;
@@ -136,7 +138,7 @@ function containsQueenOfHearts(hand) {
 function getHighCard(hand) {
   var card = hand[0];
   for (var i = 1; i < hand.length; i++) {
-    if (hand[i].Rank > card.Rank)
+    if (hand[i].rank > card.rank)
       card = hand[i];
   }
   return card;
@@ -148,7 +150,7 @@ function getHighCard(hand) {
 function isFlush(hand) {
   var card = hand[0];
   for (var i = 1; i < hand.length; i++) {
-    if (hand[i].Suit != card.Suit)
+    if (hand[i].suit != card.suit)
       return false;
   }
   return true;
